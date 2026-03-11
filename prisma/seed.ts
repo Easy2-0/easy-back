@@ -11,6 +11,11 @@ async function main() {
     prisma.categoria.upsert({ where: { id: 3 }, update: {}, create: { nome: 'Transporte', tipo: 'DESPESA' } }),
     prisma.categoria.upsert({ where: { id: 4 }, update: {}, create: { nome: 'Lazer', tipo: 'DESPESA' } }),
     prisma.categoria.upsert({ where: { id: 5 }, update: {}, create: { nome: 'Freelance', tipo: 'RECEITA' } }),
+    prisma.categoria.upsert({ where: { id: 6 }, update: {}, create: { nome: 'Saúde', tipo: 'DESPESA' } }),
+    prisma.categoria.upsert({ where: { id: 7 }, update: {}, create: { nome: 'Educação', tipo: 'DESPESA' } }),
+    prisma.categoria.upsert({ where: { id: 8 }, update: {}, create: { nome: 'Moradia', tipo: 'DESPESA' } }),
+    prisma.categoria.upsert({ where: { id: 9 }, update: {}, create: { nome: 'Investimentos', tipo: 'RECEITA' } }),
+    prisma.categoria.upsert({ where: { id: 10 }, update: {}, create: { nome: 'Outros', tipo: 'DESPESA' } }),
   ])
 
   // Usuários

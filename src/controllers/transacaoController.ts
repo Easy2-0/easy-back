@@ -9,7 +9,7 @@ const transacaoSchema = z.object({
   data: z.string().datetime({ offset: true }).or(z.string().date()),
   descricao: z.string().optional(),
   usuarioId: z.number().int().positive(),
-  categoriaId: z.number().int().positive(),
+  categoriaId: z.number().int().positive().optional(),
 })
 
 export async function listar(_req: Request, res: Response, next: NextFunction) {

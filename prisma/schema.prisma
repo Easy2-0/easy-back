@@ -38,10 +38,10 @@ model Transacao {
   descricao String?  @db.Text
 
   usuarioId   Int
-  categoriaId Int
+  categoriaId Int?
 
-  usuario   Usuario   @relation(fields: [usuarioId], references: [id])
-  categoria Categoria @relation(fields: [categoriaId], references: [id])
+  usuario   Usuario    @relation(fields: [usuarioId], references: [id])
+  categoria Categoria? @relation(fields: [categoriaId], references: [id])
 
   @@map("transacao")
 }

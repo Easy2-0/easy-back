@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cd \"C:/Users/PC-Emanuel/Desktop/easy-back\" && npx prisma migrate dev --name make_categoriaId_optional 2>&1)",
+      "Bash(cd \"C:/Users/PC-Emanuel/Desktop/easy-back\" && npx ts-node prisma/seed.ts 2>&1)",
+      "Read(//c/Users/PC-Emanuel/Desktop/easy-front/**)",
+      "Bash(npx tsc:*)"
+    ]
+  }
+}
