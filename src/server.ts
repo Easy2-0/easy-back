@@ -2,6 +2,7 @@ import 'dotenv/config'
 import express from 'express'
 import cors from 'cors'
 
+import authRoutes from './routes/auth.routes'
 import usuarioRoutes from './routes/usuario.routes'
 import categoriaRoutes from './routes/categoria.routes'
 import transacaoRoutes from './routes/transacao.routes'
@@ -15,6 +16,7 @@ app.use(cors())
 app.use(express.json())
 
 // Rotas
+app.use('/auth', authRoutes)
 app.use('/usuario', usuarioRoutes)
 app.use('/categoria', categoriaRoutes)
 app.use('/transacao', transacaoRoutes)
