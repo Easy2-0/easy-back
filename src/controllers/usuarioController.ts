@@ -33,6 +33,24 @@ export async function criar(req: Request, res: Response, next: NextFunction) {
   }
 }
 
+export async function login(req: Request, res: Response, next: NextFunction) {
+  try {
+    const { email, senha } = z.object({ email: z.string().email(), senha: z.string() }).parse(req.body)
+
+    const usuario = await prisma.usuario.findUnique({ where: { email } })
+
+    if (!usuario || usuario.senha !== senha) {
+      res.status(401).json({ error: 'E-mail ou senha incorretos' })
+      return
+    }
+
+    res.json(usuario)
+  } catch (err) {
+    next(err)
+  }
+}
+
+
 export async function atualizar(req: Request, res: Response, next: NextFunction) {
   try {
     const id = Number(req.params.id)
