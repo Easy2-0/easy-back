@@ -4,6 +4,7 @@ import cors from 'cors'
 
 import authRoutes from './routes/auth.routes'
 import usuarioRoutes from './routes/usuario.routes'
+import authRoutes from './routes/auth.routes'
 import categoriaRoutes from './routes/categoria.routes'
 import transacaoRoutes from './routes/transacao.routes'
 import investimentoRoutes from './routes/investimento.routes'

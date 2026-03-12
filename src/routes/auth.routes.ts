@@ -1,9 +1,10 @@
 import { Router } from 'express'
-import { login, cadastro } from '../controllers/authController'
+import { criar, login } from '../controllers/usuarioController'
 
 const router = Router()
 
+// O frontend espera /auth/cadastro e /auth/login
+router.post('/cadastro', criar)
 router.post('/login', login)
-router.post('/cadastro', cadastro)
 
 export default router
